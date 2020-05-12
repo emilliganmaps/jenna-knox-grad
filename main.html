@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="utf-8" />
+    <title>Jenna's Graduation Map</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
+    
+    <style>
+        
+        body{
+            margin: 0;
+            padding: 0; 
+        }
+        
+        #map{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%; 
+        }
+        
+    </style>
+    
+</head>
+    
+<body>
+    
+<div id="map"></div>
+    
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoiZW1pbGxpZ2FuIiwiYSI6ImNrYTQzYXgzcjA0dmczZm5pMjliMWl0OW4ifQ.hZaHkI6bWwH9PE9655sw8A';
+    var map = new mapboxgl.Map({
+        container: 'map',   //container id
+        style: 'mapbox://styles/emilligan/cka2jq4wy4rg81inw8ui81j2u',   //stylesheet location
+        center: [-97.8, 39.828],    //starting position [lng, lat]
+        zoom: 3.5,  //starting zoom
+
+    });
+    
+    //disable map rotation using right click + drag
+    map.dragRotate.disable();
+
+    //disable map rotation using touch rotation gesture
+    map.touchZoomRotate.disableRotation();
+    
+    map.on('load', function() {
+        map.loadImage(
+            'images/knoxgrad.png',
+            function(error, image) {
+                if (error) throw error;
+                map.addImage('knox', image);
+                map.addSource('point', {
+                    'type': 'geojson',
+                    'data': {
+                        'type': 'FeatureCollection',
+                        'features': [
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Mom and Dad</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Mom and Carl!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-88.499, 43.119]
+                                    }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Grandma Ida</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Gagi!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-88.534, 43.120]
+                                    }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Grandma Bonnie & Grandpa Ted</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Dad and Michele!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-89.504, 43.097]
+                                    }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Claire T.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Claire!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-87.63, 41.87]
+                                    }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Rob T.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Rob!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-104.99, 39.739]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From David T.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from David!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-84.466, 39.231]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Peter T.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Peter!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-105.27, 40.015]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Maggie and Newton S.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Maggie and Newton!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-87.6488, 41.9255]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Katie and Chris B.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Katie and Chris!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-77.0369, 38.9072]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Fritz and Lisa T.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Fritz and Lisa!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-87.8406, 42.259]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Michael T.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Michael!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-122.5311, 37.9735]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Emily L.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Emily!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-122.7163, 45.4157]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Ellie & Josh M.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Ellie & Josh!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-92.9952, 44.9530]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Zach M.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Zach!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-97.134, 32.941]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Colin O.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Colin!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-89.094, 42.271]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Drew and Heather T.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Heather and Drew!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-118.244, 34.0522]
+                                }
+                            }
+                        ]
+                    }
+                });
+                map.addLayer({
+                    'id': 'points',
+                    'type': 'symbol',
+                    'source': 'point',
+                    'layout': {
+                        'icon-image': 'knox',
+                        'icon-size': 0.2,
+                        'icon-allow-overlap': true
+                    }
+                });
+                
+                //when a click event occurs on a feature in the places layer, open a popup at the location of the feature, with description HTML from its properties.
+                map.on('click', 'points', function(e) {
+                    var coordinates = e.features[0].geometry.coordinates.slice();
+                    var description = e.features[0].properties.description;
+
+                    //ensure that if the map is zoomed out such that multiple copies of the feature are visible, the popup appears over the copy being pointed to.
+                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                    }
+
+                    new mapboxgl.Popup()
+                    .setLngLat(coordinates)
+                    .setHTML(description)
+                    .addTo(map);
+                });
+
+                //change the cursor to a pointer when the mouse is over the places layer.
+                map.on('mouseenter', 'places', function() {
+                    map.getCanvas().style.cursor = 'pointer';
+                });
+
+                //change back to pointer
+                map.on('mouseleave', 'places', function() {
+                    map.getCanvas().style.cursor = '';
+                });
+            }
+        );
+    });
+</script>
+
+</body>
+</html>
