@@ -35,10 +35,11 @@
 	mapboxgl.accessToken = 'pk.eyJ1IjoiZW1pbGxpZ2FuIiwiYSI6ImNrYTQzYXgzcjA0dmczZm5pMjliMWl0OW4ifQ.hZaHkI6bWwH9PE9655sw8A';
     var map = new mapboxgl.Map({
         container: 'map',   //container id
-        style: 'mapbox://styles/emilligan/cka2jq4wy4rg81inw8ui81j2u',   //stylesheet location
-        center: [-97.8, 39.828],    //starting position [lng, lat]
-        zoom: 3.5,  //starting zoom
-
+        style: 'mapbox://styles/emilligan/cka42c6m90zb41jl9cwe17of5',   //stylesheet location
+        center: [-157.144, 12.794],    //starting position [lng, lat]
+        zoom: 2,  //starting zoom
+        minZoom: 2, //minimum zoom level
+        maxZoom: 10.5   //maximum zoom level
     });
     
     //disable map rotation using right click + drag
@@ -62,19 +63,31 @@
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Mom and Dad</strong><p><a href="https://www.knox.edu/commencement-information" target="_blank" title="Opens in a new window">Click to see a message from Mom and Dad!</a></p>',
+                                        '<strong>From Mom</strong><p><a href="https://youtu.be/DzSABQH_drw" target="_blank" title="Opens in a new window">Click to see a message from Mom!</a></p>',
                                     'icon': 'knox'
                                 },
                                 'geometry': {
                                     'type': 'Point',
-                                    'coordinates': [-92.480, 44.0121]
+                                    'coordinates': [-92.519, 44.079]
                                     }
                             },
                             {
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Grandma Ida</strong><p><a href="https://www.knox.edu/commencement-information" target="_blank" title="Opens in a new window">Click to see a message from Grandma Ida!</a></p>',
+                                        '<strong>From Dad</strong><p><a href="https://youtu.be/2YbtU_ES0F8" target="_blank" title="Opens in a new window">Click to see a message from Dad!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-92.507, 44.058]
+                                    }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Grandma Ida</strong><p><a href="https://youtu.be/qLbzUfhnO3U" target="_blank" title="Opens in a new window">Click to see a message from Grandma Ida!</a></p>',
                                     'icon': 'knox'
                                 },
                                 'geometry': {
@@ -86,7 +99,7 @@
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Grandma Bonnie & Grandpa Ted</strong><p><a href="https://www.knox.edu/commencement-information" target="_blank" title="Opens in a new window">Click to see a message from Grandma & Grandpa Ziegler!</a></p>',
+                                        '<strong>From Grandma Bonnie & Grandpa Ted</strong><p><a href="https://www.knox.edu/commencement-information" target="_blank" title="Opens in a new window">Click to see their message!</a></p>',
                                     'icon': 'knox'
                                 },
                                 'geometry': {
@@ -98,7 +111,7 @@
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Ellie & Josh M.</strong><p><a href="https://www.knox.edu/commencement-information" target="_blank" title="Opens in a new window">Click to see a message from Ellie & Josh!</a></p>',
+                                        '<strong>From Ellie</strong><p><a href="https://www.knox.edu/commencement-information" target="_blank" title="Opens in a new window">Click to see a message from Ellie!</a></p>',
                                     'icon': 'knox'
                                 },
                                 'geometry': {
@@ -110,19 +123,31 @@
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Aaron</strong><p><a href="https://www.knox.edu/commencement-information" target="_blank" title="Opens in a new window">Click to see a message from Aaron!</a></p>',
+                                        '<strong>From Josh</strong><p><a href="https://www.knox.edu/commencement-information" target="_blank" title="Opens in a new window">Click to see a message from Josh!</a></p>',
                                     'icon': 'knox'
                                 },
                                 'geometry': {
                                     'type': 'Point',
-                                    'coordinates': [-92.526, 43.99]
+                                    'coordinates': [-92.985, 45.02]
                                 }
                             },
                             {
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Annie P.</strong><p><a href="https://www.knox.edu/commencement-information" target="_blank" title="Opens in a new window">Click to see a message from Annie!</a></p>',
+                                        '<strong>From Aaron</strong><p><a href="https://www.knox.edu/commencement-information" target="_blank" title="Opens in a new window">Click to see a message from Aaron!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-92.528, 44.034]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Annie P.</strong><p><a href="https://youtu.be/15om1ltUdyk" target="_blank" title="Opens in a new window">Click to see a message from Annie!</a></p>',
                                     'icon': 'knox'
                                 },
                                 'geometry': {
@@ -146,7 +171,7 @@
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Amy, Mike, J, & K</strong><p><a href="https://www.knox.edu/commencement-information" target="_blank" title="Opens in a new window">Click to see their message!</a></p>',
+                                        '<strong>From Amy, Mike, J, & K</strong><p><a href="https://youtu.be/6Den0_iPeOA" target="_blank" title="Opens in a new window">Click to see their message!</a></p>',
                                     'icon': 'knox'
                                 },
                                 'geometry': {
@@ -158,7 +183,7 @@
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Troy, Lisa, M&M&M </strong><p><a href="https://www.knox.edu/commencement-information" target="_blank" title="Opens in a new window">Click to see their message!</a></p>',
+                                        '<strong>From M&M&M </strong><p><a href="https://youtu.be/udxZzwEZBdU" target="_blank" title="Opens in a new window">Click to see their message!</a></p>',
                                     'icon': 'knox'
                                 },
                                 'geometry': {
@@ -170,12 +195,192 @@
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Amy, Wayne, C, & R</strong><p><a href="https://www.knox.edu/commencement-information" target="_blank" title="Opens in a new window">Click to see their message!</a></p>',
+                                        '<strong>From C & R</strong><p><a href="https://youtu.be/ye153GXs-MY" target="_blank" title="Opens in a new window">Click to see their message!</a></p>',
                                     'icon': 'knox'
                                 },
                                 'geometry': {
                                     'type': 'Point',
-                                    'coordinates': [-94.798, 29.301]
+                                    'coordinates': [-94.751, 29.330]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Amy & Wayne M.</strong><p><a href="https://youtu.be/SrrMGZEFWoM" target="_blank" title="Opens in a new window">Click to see their message!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-94.893, 29.251]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Mr. J</strong><p><a href="https://youtu.be/zvdNGkO1NX4" target="_blank" title="Opens in a new window">Click to see a message from Mr. J!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-92.485, 44.034]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Maggie</strong><p><a href="https://youtu.be/b-MAp3iliMs" target="_blank" title="Opens in a new window">Click to see a message from Maggie!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-93.060, 44.996]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Taryn E.</strong><p><a href="https://youtu.be/hfjOF8OdtXY" target="_blank" title="Opens in a new window">Click to see a message from Taryn!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-105.017, 39.613]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Al & Julie W.</strong><p><a href="https://youtu.be/VazkQa1JrV8" target="_blank" title="Opens in a new window">Click to see their message!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-92.455, 44.014]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Carl & Elizabeth O.</strong><p><a href="https://youtu.be/QtyJLhTXAyA" target="_blank" title="Opens in a new window">Click to see their message!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-92.468, 44.059]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Rosie M.</strong><p><a href="https://youtu.be/CRFVN1tbSSM" target="_blank" title="Opens in a new window">Click to see a message from Rosie!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-117.351, 33.158]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Katy C.</strong><p><a href="https://youtu.be/295L_c1F2-c" target="_blank" title="Opens in a new window">Click to see a message from Katy!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-87.956, 41.758]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Cindy & Pat C.</strong><p><a href="https://youtu.be/ugL3tMIlI-s" target="_blank" title="Opens in a new window">Click to see their video message!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-87.944, 41.777]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Chris W.</strong><p><a href="https://youtu.be/ugL3tMIlI-s" target="_blank" title="Opens in a new window">Click to see a message from Chris!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-90.371, 40.946]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Scott & Mary H.</strong><p><a href="https://youtu.be/ugL3tMIlI-s" target="_blank" title="Opens in a new window">Click to see their video message!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-92.443, 44.037]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Augusto T.</strong><p><a href="https://youtu.be/e4xr1vZJcvs" target="_blank" title="Opens in a new window">Click to see a message from Augusto!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [151.209, -33.869]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Mrs. D.</strong><p><a href="https://youtu.be/TvtEfmPUY78" target="_blank" title="Opens in a new window">Click to see a message from Mrs. D!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-92.441, 44.077]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Jamie R.</strong><p><a href="https://youtu.be/TvtEfmPUY78" target="_blank" title="Opens in a new window">Click to see a message from Jamie!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-92.479, 44.088]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Jeff, Denise, Kayleen, & Cody</strong><p><a href="https://youtu.be/ZYEeq2q-n4Q" target="_blank" title="Opens in a new window">Click to see their message!</a></p>',
+                                    'icon': 'knox'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-88.045, 42.060]
                                 }
                             }
                         ]
